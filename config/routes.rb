@@ -8,4 +8,8 @@ get("/places", { controller: "places", action: "index" })       # List all place
 get("/places/new", { controller: "places", action: "new" })     # New place form
 post("/places", { controller: "places", action: "create" })     # Create a place
 get("/places/:id", { controller: "places", action: "show" })    # Show a place
+# Routes for Entries
+get("/entries/new/:place_id", { controller: "entries", action: "new" })  # Show form for new entry
+post("/entries", { controller: "entries", action: "create" })            # Create an entry
+
 end

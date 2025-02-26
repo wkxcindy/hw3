@@ -1,0 +1,14 @@
+<h1><%= @place["name"] %></h1>
+
+<p><a href="/places">Back to Places I've Been</a></p>
+
+<h2>Journal Entries</h2>
+<ul>
+  <% for entry in @entries %>
+    <li>
+      <strong><%= entry["title"] %></strong>: <%= entry["description"] %> (on <%= entry["occurred_on"] %>)
+    </li>
+  <% end %>
+</ul>
+
+<p><a href="/entries/new/<%= @place["id"] %>">Add a New Entry</a></p>
